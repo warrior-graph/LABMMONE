@@ -1,0 +1,15 @@
+# docker-compose.prod.yml — Production overrides
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+services:
+  backend:
+    build:
+      target: prod
+    environment:
+      FLASK_ENV: production
+      CORS_ORIGINS: "http://localhost"
+
+  frontend:
+    build:
+      target: prod
+    ports:
+      - "80:80"

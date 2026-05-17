@@ -1,0 +1,22 @@
+# docker-compose.override.yml — Development overrides (auto-loaded by "docker compose up")
+services:
+  backend:
+    build:
+      target: dev
+    environment:
+      FLASK_ENV: development
+      CORS_ORIGINS: "http://localhost:4200"
+    ports:
+      - "5000:5000"
+    volumes:
+      - sqlite_data:/app/instance
+      - ./LABMM:/app          # bind-mount source for hot-reload
+      - /app/instance          # keep the named volume authoritative for instance/
+
+  frontend:
+    build:
+      target: dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./LABMMIF/src:/app/src  # bind-mount source for hot-reload
