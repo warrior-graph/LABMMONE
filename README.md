@@ -25,6 +25,7 @@ Create a `.env` file in the project root:
 ```env
 SECRET_KEY=your-secret-key
 JWT_SECRET_KEY=your-jwt-secret-key
+DATABASE_URL=sqlite:///labmm.db
 
 # Optional: defaults shown below
 ADMIN_EMAIL=admin@labmm.local
@@ -36,6 +37,7 @@ ADMIN_LAST_NAME=User
 ### 2. Development
 
 ```bash
+git submodule update --init --recursive
 docker compose up --build
 ```
 
@@ -58,8 +60,8 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
 
 See the individual guides for local development:
 
-- [LABMM/HOW_TO_RUN.md](LABMM/HOW_TO_RUN.md) — Backend (Python 3.10+)
-- [LABMMIF/HOW_TO_RUN.md](LABMMIF/HOW_TO_RUN.md) — Frontend (Node.js 24 LTS, Angular CLI 21+)
+- [LABMM/HOW_TO_RUN.md](https://github.com/warrior-graph/LABMM/blob/master/HOW_TO_RUN.md) — Backend (Python 3.10+)
+- [LABMMIF/HOW_TO_RUN.md](https://github.com/warrior-graph/LABMMIF/blob/master/HOW_TO_RUN.md) — Frontend (Node.js 24 LTS, Angular CLI 21+)
 
 ---
 
