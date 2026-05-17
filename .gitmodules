@@ -1,0 +1,6 @@
+[submodule "LABMM"]
+	path = LABMM
+	url = git@github.com:warrior-graph/LABMM.git
+[submodule "LABMMIF"]
+	path = LABMMIF
+	url = git@github.com:warrior-graph/LABMMIF.git
